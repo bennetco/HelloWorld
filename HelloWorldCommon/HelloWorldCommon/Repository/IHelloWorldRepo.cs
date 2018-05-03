@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace HelloWorldCommon
+namespace HelloWorldCommon.Repository
 {
     public interface IHelloWorldRepo
     {
-        HelloWorldDTO GetData();
+        string GetMessage();
     }
 }

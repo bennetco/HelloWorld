@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HelloWorldCommon
+namespace HelloWorldCommon.Service
 {
     public interface IHelloWorldService
     {
