@@ -12,14 +12,13 @@ namespace HelloWorldExample
         public static void Main(string[] args)
         {
             var serviceProvider = new ServiceCollection()
-                .AddSingleton<IHelloWorldRepo, HelloWorldBasicRepo>()
-                .AddSingleton<IHelloWorldService, HelloWorldService>()
+                .AddSingleton<IHelloWorldRepo, DefaultHelloWorldRepo>()
+                .AddSingleton<IHelloWorldContentService, DefaultHelloWorldContentService>()
+                .AddSingleton<IHelloWorldOutputService, HelloWorldConsoleOutputService>()
+                .AddSingleton<HelloWorldOutputApplication>()
                 .BuildServiceProvider();
 
-            var data = serviceProvider.GetService<IHelloWorldService>().GetHelloWorld();
-
-            Console.Write(data.Message);
-            Console.Read();
+            serviceProvider.GetRequiredService<HelloWorldOutputApplication>().Run();
         }
     }
 }

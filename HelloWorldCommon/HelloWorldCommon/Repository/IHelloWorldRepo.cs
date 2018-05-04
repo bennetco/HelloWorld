@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace HelloWorldCommon.Repository
+﻿namespace HelloWorldCommon.Repository
 {
     public interface IHelloWorldRepo
     {
-        string GetMessage();
+        string GetHelloWorldMessage();
+        void StoreHelloWorldMessage(string message);
     }
 }
