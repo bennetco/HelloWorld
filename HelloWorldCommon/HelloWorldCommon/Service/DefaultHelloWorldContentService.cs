@@ -4,7 +4,7 @@ using HelloWorldCommon.DTO;
 
 namespace HelloWorldExample.Service
 {
-    public class DefaultHelloWorldContentService : IHelloWorldContentService
+    public class DefaultHelloWorldContentService : HelloWorldContentServiceBase
     {
         private IHelloWorldRepo _repo;
 
@@ -13,7 +13,7 @@ namespace HelloWorldExample.Service
             _repo = repo;
         }
 
-        public HelloWorldDTO GetHelloWorldContent()
+        public override HelloWorldDTO GetHelloWorldContent()
         {
             return new HelloWorldDTO
             {
@@ -21,7 +21,7 @@ namespace HelloWorldExample.Service
             };
         }
 
-        public void StoreHelloWorldContent(HelloWorldDTO content)
+        public override void StoreHelloWorldContent(HelloWorldDTO content)
         {
             _repo.StoreHelloWorldMessage(content.Message);
         }

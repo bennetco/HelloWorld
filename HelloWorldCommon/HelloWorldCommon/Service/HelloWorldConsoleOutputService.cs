@@ -3,9 +3,9 @@ using HelloWorldCommon.DTO;
 
 namespace HelloWorldCommon.Service
 {
-    public class HelloWorldConsoleOutputService : IHelloWorldOutputService
+    public class HelloWorldConsoleOutputService : HelloWorldOutputServiceBase
     {
-        public void OutputHelloWorld(HelloWorldDTO content)
+        public override void OutputHelloWorld(HelloWorldDTO content)
         {
             Console.Write(content.Message);
         }
