@@ -13,8 +13,8 @@ namespace HelloWorldExample
         {
             var serviceProvider = new ServiceCollection()
                 .AddSingleton<IHelloWorldRepo, DefaultHelloWorldRepo>()
-                .AddSingleton<IHelloWorldContentService, DefaultHelloWorldContentService>()
-                .AddSingleton<IHelloWorldOutputService, HelloWorldConsoleOutputService>()
+                .AddSingleton<IHelloWorldContentProvider, DefaultHelloWorldContentService>()
+                .AddSingleton<IHelloWorldWriter, HelloWorldConsoleWriter>()
                 .AddSingleton<HelloWorldOutputApplication>()
                 .BuildServiceProvider();
 

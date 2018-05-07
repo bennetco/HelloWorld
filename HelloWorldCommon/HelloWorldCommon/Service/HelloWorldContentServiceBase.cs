@@ -5,9 +5,8 @@ using HelloWorldCommon.DTO;
 
 namespace HelloWorldCommon.Service
 {
-    public abstract class HelloWorldContentServiceBase : IHelloWorldContentService
+    public abstract class HelloWorldContentProviderBase : IHelloWorldContentProvider
     {
         public abstract HelloWorldDTO GetHelloWorldContent();
-        public abstract void StoreHelloWorldContent(HelloWorldDTO content);
     }
 }

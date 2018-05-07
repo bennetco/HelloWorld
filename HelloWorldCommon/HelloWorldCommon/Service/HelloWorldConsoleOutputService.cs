@@ -3,11 +3,18 @@ using HelloWorldCommon.DTO;
 
 namespace HelloWorldCommon.Service
 {
-    public class HelloWorldConsoleOutputService : HelloWorldOutputServiceBase
+    public class HelloWorldConsoleWriter : HelloWorldWriterBase
     {
-        public override void OutputHelloWorld(HelloWorldDTO content)
+        private readonly IHelloWorldContentProvider _provider;
+
+        public HelloWorldConsoleWriter(IHelloWorldContentProvider provider)
         {
-            Console.Write(content.Message);
+            _provider = provider;
+        }
+
+        public override void WriteHelloWorld()
+        {
+            Console.Write(_provider.GetHelloWorldContent().Message);
         }
     }
 }

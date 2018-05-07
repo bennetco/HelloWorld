@@ -5,11 +5,11 @@ namespace HelloWorldExample
 {
     public class HelloWorldOutputApplication
     {
-        private readonly IHelloWorldContentService _contentService;
-        private readonly IHelloWorldOutputService _outputService;
+        private readonly IHelloWorldContentProvider _contentService;
+        private readonly IHelloWorldWriter _outputService;
 
-        public HelloWorldOutputApplication(IHelloWorldContentService contentService,
-            IHelloWorldOutputService outputService)
+        public HelloWorldOutputApplication(IHelloWorldContentProvider contentService,
+            IHelloWorldWriter outputService)
         {
             _contentService = contentService;
             _outputService = outputService;
@@ -18,7 +18,7 @@ namespace HelloWorldExample
         public void Run()
         {
             var content = _contentService.GetHelloWorldContent();
-            _outputService.OutputHelloWorld(content);
+            _outputService.WriteHelloWorld();
             Console.Read();
         }
     }
