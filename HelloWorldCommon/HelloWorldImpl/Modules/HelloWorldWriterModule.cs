@@ -1,16 +1,15 @@
 ﻿using Autofac;
 
-namespace HelloWorldCommon.Modules
+namespace HelloWorldExample.Modules
 {
     public class HelloWorldWriterModule : Module
     {
-        public string Something { get; set; }
+        public string WhereToWrite { get; set; }
         public string ConnectionString { get; set; }
 
         protected override void Load(ContainerBuilder builder)
         {
             
         }
-
     }
 }
