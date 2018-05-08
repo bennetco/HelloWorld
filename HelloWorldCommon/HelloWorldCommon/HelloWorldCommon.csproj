@@ -3,7 +3,6 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Service\DefaultHelloWorldContentProvider.cs" />
     <Compile Include="Service\HelloWorldConsoleWriter.cs" />
     <Compile Include="Service\HelloWorldContentProvider.cs" />
     <Compile Include="Service\HelloWorldContentProviderBase.cs" />
