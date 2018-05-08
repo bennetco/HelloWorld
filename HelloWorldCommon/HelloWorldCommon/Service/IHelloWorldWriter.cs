@@ -1,6 +1,4 @@
-﻿using HelloWorldCommon.DTO;
-
-namespace HelloWorldCommon.Service
+﻿namespace HelloWorldCommon.Service
 {
     public interface IHelloWorldWriter
     {

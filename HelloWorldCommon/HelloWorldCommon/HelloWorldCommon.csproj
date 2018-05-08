@@ -6,6 +6,7 @@
     <Compile Include="Service\DefaultHelloWorldContentProvider.cs" />
     <Compile Include="Service\HelloWorldConsoleWriter.cs" />
     <Compile Include="Service\HelloWorldContentProviderBase.cs" />
+    <Compile Include="Service\HelloWorldRepoWriter.cs" />
     <Compile Include="Service\HelloWorldWriterBase.cs" />
     <Compile Include="Service\IHelloWorldContentProvider.cs" />
   </ItemGroup>

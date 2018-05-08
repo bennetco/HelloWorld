@@ -1,8 +1,7 @@
-﻿using HelloWorldCommon.Service;
-using HelloWorldCommon.Repository;
+﻿using HelloWorldCommon.Repository;
 using HelloWorldCommon.DTO;
 
-namespace HelloWorldExample.Service
+namespace HelloWorldCommon.Service
 {
     public class DefaultHelloWorldContentProvider : HelloWorldContentProviderBase
     {

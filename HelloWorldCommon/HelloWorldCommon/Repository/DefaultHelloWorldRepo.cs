@@ -1,6 +1,4 @@
-﻿using HelloWorldCommon.Repository;
-
-namespace HelloWorldExample.Repository
+﻿namespace HelloWorldCommon.Repository
 {
     public class DefaultHelloWorldRepo : IHelloWorldRepo
     {

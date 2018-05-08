@@ -1,13 +1,12 @@
 ﻿using HelloWorldCommon.Service;
-using System;
 
 namespace HelloWorldExample
 {
-    public class HelloWorldOutputApplication
+    public class WriteHelloWorldApplication
     {
         private readonly IHelloWorldWriter _writer;
 
-        public HelloWorldOutputApplication(IHelloWorldWriter writer)
+        public WriteHelloWorldApplication(IHelloWorldWriter writer)
         {
             _writer = writer;
         }

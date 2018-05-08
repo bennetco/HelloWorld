@@ -1,9 +1,6 @@
-﻿using System;
-using Microsoft.Extensions.DependencyInjection;
-using HelloWorldCommon.Repository;
-using HelloWorldExample.Repository;
+﻿using HelloWorldCommon.Repository;
 using HelloWorldCommon.Service;
-using HelloWorldExample.Service;
+using Autofac;
 
 namespace HelloWorldExample
 {
@@ -11,14 +8,10 @@ namespace HelloWorldExample
     {
         public static void Main(string[] args)
         {
-            var serviceProvider = new ServiceCollection()
-                .AddSingleton<IHelloWorldRepo, DefaultHelloWorldRepo>()
-                .AddSingleton<IHelloWorldContentProvider, DefaultHelloWorldContentService>()
-                .AddSingleton<IHelloWorldWriter, HelloWorldConsoleWriter>()
-                .AddSingleton<HelloWorldOutputApplication>()
-                .BuildServiceProvider();
-
-            serviceProvider.GetRequiredService<HelloWorldOutputApplication>().Run();
+            //autofac stuff?
+            //var builder = new ContainerBuilder()
+             //   .RegisterModule<Something>()
+              //  .Build();
         }
     }
 }
