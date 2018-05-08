@@ -3,11 +3,11 @@ using HelloWorldCommon.DTO;
 
 namespace HelloWorldCommon.Service
 {
-    public class DefaultHelloWorldContentProvider : HelloWorldContentProviderBase
+    internal class HelloWorldContentProvider : HelloWorldContentProviderBase
     {
-        private IHelloWorldRepo _repo;
+        private readonly IHelloWorldRepo _repo;
 
-        public DefaultHelloWorldContentProvider(IHelloWorldRepo repo)
+        public HelloWorldContentProvider(IHelloWorldRepo repo)
         {
             _repo = repo;
         }
