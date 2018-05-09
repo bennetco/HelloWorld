@@ -7,12 +7,7 @@ namespace HelloWorldCommon.Service
     {
         public override HelloWorldDTO GetHelloWorldContent()
         {
-            var msg = Console.ReadLine();
-
-            return new HelloWorldDTO
-            {
-                Message = msg
-            };
+            throw new NotImplementedException("Not implemented for this exercise");
         }
     }
 }

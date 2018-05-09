@@ -1,4 +1,6 @@
-﻿namespace HelloWorldCommon.Repository
+﻿using System;
+
+namespace HelloWorldCommon.Repository
 {
     public class DefaultHelloWorldRepo : HelloWorldRepoBase
     {
@@ -9,7 +11,7 @@
 
         public override void StoreHelloWorldMessage(string message)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException("Default repo does not support storing");
         }
     }
 }

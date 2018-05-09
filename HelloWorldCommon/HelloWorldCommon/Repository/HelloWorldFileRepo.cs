@@ -2,13 +2,13 @@
 
 namespace HelloWorldCommon.Repository
 {
-    public class HelloWorldDatabaseRepo : HelloWorldRepoBase
+    public class HelloWorldFileRepo : HelloWorldRepoBase
     {
-        private readonly string _connectionString;
+        private readonly string _filePath;
 
-        public HelloWorldDatabaseRepo(string connectionString)
+        public HelloWorldFileRepo(string filePath)
         {
-            _connectionString = connectionString;
+            _filePath = filePath;
         }
 
         public override string GetHelloWorldMessage()

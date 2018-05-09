@@ -10,7 +10,7 @@ namespace HelloWorldExample.Modules
 
         public string ConnectionString { get; set; }
 
-        public string FileName { get; set; }
+        public string FilePath { get; set; }
 
         protected override void Load(ContainerBuilder builder)
         {
@@ -32,12 +32,14 @@ namespace HelloWorldExample.Modules
 
         private void RegisterDatabaseRepo(ContainerBuilder builder)
         {
-            throw new NotImplementedException();
+            builder.Register(cxt => new HelloWorldDatabaseRepo(ConnectionString))
+                .As<IHelloWorldRepo>();
         }
 
         private void RegisterFileRepo(ContainerBuilder builder)
         {
-            throw new NotImplementedException();
+            builder.Register(cxt => new HelloWorldFileRepo(FilePath))
+                .As<IHelloWorldRepo>();
         }
 
         private void RegisterDefaultRepo(ContainerBuilder builder)
