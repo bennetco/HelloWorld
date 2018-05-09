@@ -18,11 +18,10 @@ namespace HelloWorldExample
             builder.RegisterType<WriteHelloWorldApplication>();
 
             var container = builder.Build();
-
             using (var scope = container.BeginLifetimeScope())
             {
                 scope.Resolve<WriteHelloWorldApplication>().Run();
-            }
+            }  
         }
     }
 }

@@ -6,7 +6,7 @@ namespace HelloWorldCommon.Repository
     {
         public override string GetHelloWorldMessage()
         {
-            return "Hello World";
+            return Constants.HelloWorldValue;
         }
 
         public override void StoreHelloWorldMessage(string message)
