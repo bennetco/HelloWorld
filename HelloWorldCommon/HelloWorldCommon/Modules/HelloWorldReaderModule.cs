@@ -3,7 +3,7 @@ using Autofac;
 using HelloWorldCommon.Service;
 using HelloWorldCommon.Repository;
 
-namespace HelloWorldExample.Modules
+namespace HelloWorldCommon.Modules
 {
     public class HelloWorldReaderModule : Module
     {

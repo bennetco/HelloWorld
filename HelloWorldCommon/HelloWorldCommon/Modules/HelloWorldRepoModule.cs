@@ -2,7 +2,7 @@
 using HelloWorldCommon.Repository;
 using System;
 
-namespace HelloWorldExample.Modules
+namespace HelloWorldCommon.Modules
 {
     public class HelloWorldRepoModule : Module
     {
@@ -24,6 +24,7 @@ namespace HelloWorldExample.Modules
                     RegisterFileRepo(builder);
                     break;
 
+                case "default":
                 default:
                     RegisterDefaultRepo(builder);
                     break;

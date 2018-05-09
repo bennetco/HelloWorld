@@ -1,6 +1,6 @@
-﻿using HelloWorldCommon.Repository;
-using HelloWorldCommon.Service;
-using Autofac;
+﻿using Autofac;
+using Autofac.Configuration;
+using Microsoft.Extensions.Configuration;
 
 namespace HelloWorldExample
 {
@@ -8,10 +8,21 @@ namespace HelloWorldExample
     {
         public static void Main(string[] args)
         {
-            //autofac stuff?
-            //var builder = new ContainerBuilder()
-             //   .RegisterModule<Something>()
-              //  .Build();
+            var config = new ConfigurationBuilder()
+                .AddJsonFile("./appSettings.json")
+                .Build();
+
+            var builder = new ContainerBuilder();
+            
+            builder.RegisterModule(new ConfigurationModule(config));            
+            builder.RegisterType<WriteHelloWorldApplication>();
+
+            var container = builder.Build();
+
+            using (var scope = container.BeginLifetimeScope())
+            {
+                scope.Resolve<WriteHelloWorldApplication>().Run();
+            }
         }
     }
 }
