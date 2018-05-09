@@ -4,9 +4,9 @@ namespace HelloWorldCommon.Service
 {
     public class HelloWorldConsoleWriter : HelloWorldWriterBase
     {
-        private readonly IHelloWorldContentProvider _provider;
+        private readonly IHelloWorldReader _provider;
 
-        public HelloWorldConsoleWriter(IHelloWorldContentProvider provider)
+        public HelloWorldConsoleWriter(IHelloWorldReader provider)
         {
             _provider = provider;
         }

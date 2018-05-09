@@ -1,6 +1,6 @@
 ﻿namespace HelloWorldCommon.Repository
 {
-    internal class HelloWorldRepo : HelloWorldRepoBase
+    public class HelloWorldRepo : HelloWorldRepoBase
     {
         public override void StoreHelloWorldMessage(string message)
         {

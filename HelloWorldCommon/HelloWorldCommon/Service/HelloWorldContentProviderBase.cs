@@ -5,7 +5,7 @@ using HelloWorldCommon.DTO;
 
 namespace HelloWorldCommon.Service
 {
-    public abstract class HelloWorldContentProviderBase : IHelloWorldContentProvider
+    public abstract class HelloWorldContentProviderBase : IHelloWorldReader
     {
         public abstract HelloWorldDTO GetHelloWorldContent();
     }

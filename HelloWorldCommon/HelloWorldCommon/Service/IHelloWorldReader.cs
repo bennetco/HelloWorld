@@ -2,7 +2,7 @@
 
 namespace HelloWorldCommon.Service
 {
-    public interface IHelloWorldContentProvider
+    public interface IHelloWorldReader
     {
         HelloWorldDTO GetHelloWorldContent();
     }

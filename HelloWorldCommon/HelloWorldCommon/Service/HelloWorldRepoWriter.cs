@@ -4,10 +4,10 @@ namespace HelloWorldCommon.Service
 {
     public class HelloWorldRepoWriter : HelloWorldWriterBase
     {
-        private readonly IHelloWorldContentProvider _provider;
+        private readonly IHelloWorldReader _provider;
         private readonly IHelloWorldRepo _repo;
 
-        public HelloWorldRepoWriter(IHelloWorldContentProvider provider,
+        public HelloWorldRepoWriter(IHelloWorldReader provider,
             IHelloWorldRepo repo)
         {
             _provider = provider;
