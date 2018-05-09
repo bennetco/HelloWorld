@@ -4,16 +4,16 @@ namespace HelloWorldCommon.Service
 {
     public class HelloWorldConsoleWriter : HelloWorldWriterBase
     {
-        private readonly IHelloWorldReader _provider;
+        private readonly IHelloWorldReader _reader;
 
-        public HelloWorldConsoleWriter(IHelloWorldReader provider)
+        public HelloWorldConsoleWriter(IHelloWorldReader reader)
         {
-            _provider = provider;
+            _reader = reader;
         }
 
         public override void WriteHelloWorld()
         {
-            Console.Write(_provider.GetHelloWorldContent().Message);
+            Console.Write(_reader.GetHelloWorldContent().Message);
         }
     }
 }

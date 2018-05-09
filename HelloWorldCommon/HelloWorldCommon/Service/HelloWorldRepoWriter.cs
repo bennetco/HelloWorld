@@ -4,19 +4,19 @@ namespace HelloWorldCommon.Service
 {
     public class HelloWorldRepoWriter : HelloWorldWriterBase
     {
-        private readonly IHelloWorldReader _provider;
+        private readonly IHelloWorldReader _reader;
         private readonly IHelloWorldRepo _repo;
 
-        public HelloWorldRepoWriter(IHelloWorldReader provider,
+        public HelloWorldRepoWriter(IHelloWorldReader reader,
             IHelloWorldRepo repo)
         {
-            _provider = provider;
+            _reader = reader;
             _repo = repo;
         }
         
         public override void WriteHelloWorld()
         {
-            _repo.StoreHelloWorldMessage(_provider.GetHelloWorldContent().Message);
+            _repo.StoreHelloWorldMessage(_reader.GetHelloWorldContent().Message);
         }
     }
 }
