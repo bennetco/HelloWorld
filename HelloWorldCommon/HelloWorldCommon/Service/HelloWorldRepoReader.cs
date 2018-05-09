@@ -3,7 +3,7 @@ using HelloWorldCommon.DTO;
 
 namespace HelloWorldCommon.Service
 {
-    public class HelloWorldRepoReader : HelloWorldContentProviderBase
+    public class HelloWorldRepoReader : HelloWorldReaderBase
     {
         private readonly IHelloWorldRepo _repo;
 

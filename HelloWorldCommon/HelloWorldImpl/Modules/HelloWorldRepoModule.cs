@@ -1,8 +1,6 @@
 ﻿using Autofac;
 using HelloWorldCommon.Repository;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace HelloWorldExample.Modules
 {
@@ -44,7 +42,7 @@ namespace HelloWorldExample.Modules
 
         private void RegisterDefaultRepo(ContainerBuilder builder)
         {
-            builder.Register(cxt => new HelloWorldRepo())
+            builder.Register(cxt => new DefaultHelloWorldRepo())
                 .As<IHelloWorldRepo>();
         }
     }

@@ -12,6 +12,7 @@ namespace HelloWorldExample.Modules
         {            
             switch (WhereToWrite.ToLowerInvariant())
             {
+                case "repo":
                 case "repository":
                     RegisterRepoWriter(builder);
                     break;
