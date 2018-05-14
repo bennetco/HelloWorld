@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWorldCommon", "HelloWorldCommon\HelloWorldCommon.csproj", "{81D07BB9-E6AA-4910-8E65-E381960E0139}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWorldExample", "HelloWorldImpl\HelloWorldExample.csproj", "{BC7D5278-C723-4247-B54E-59331170694E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWorldExample", "HelloWorldExample\HelloWorldExample.csproj", "{BC7D5278-C723-4247-B54E-59331170694E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldCommon.Test", "HelloWorldCommon.Test\HelloWorldCommon.Test.csproj", "{002C20EA-A7BC-48FA-9B77-CC9CCD31608B}"
 EndProject
